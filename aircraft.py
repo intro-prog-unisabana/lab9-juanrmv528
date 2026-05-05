@@ -1,12 +1,12 @@
 # FREEZE CODE BEGIN
 class Aircraft:
-    def __init__(self, model, altitude=0):
+    def __init__(self, model):
         self.model = model
-        self.altitude = altitude
-
-    def climb(self, feet):
-        self.altitude += feet
-
+        self.altitude = 0
+ 
+    def ascend(self, feet):
+        self.altitude = self.altitude + feet
+ 
     def descend(self, feet):
-        self.altitude -= feet
+        self.altitude = self.altitude - feet
 # FREEZE CODE END
