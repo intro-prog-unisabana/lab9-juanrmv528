@@ -16,4 +16,4 @@ class Book:
             print("Title is too short!")
 
     def __str__(self):
-        return f"'{self._title}' by {self._author} ({self._year})"
+        return f"'{self._title}' by {self._author} ({self._year})
