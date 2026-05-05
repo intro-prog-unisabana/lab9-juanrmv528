@@ -13,7 +13,7 @@ class Book:
         if len(title) > 1:
             self._title = title
         else:
-            print("Title is too short!")
+            print("Title is too short!"
 
     def __str__(self):
         return f"'{self._title}' by {self._author} ({self._year})"
