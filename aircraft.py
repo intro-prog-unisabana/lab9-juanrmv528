@@ -8,5 +8,5 @@ class Aircraft:
         self.altitude += feet
 
     def descend(self, feet):
-        self.altitude -= fee
+        self.altitude -= feet
 # FREEZE CODE END
