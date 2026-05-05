@@ -1,14 +1,16 @@
-# Write your class definition here!
-from car import Car
+class Car:
+    def __init__(self, car_id, brand, year, color, mileage=0.0):
+        self.car_id = car_id
+        self.brand = brand
+        self.year = year
+        self.color = color
+        self.mileage = mileage
  
-def create_car_from_input():
-    car_id = input("Enter car ID (e.g., CAR001):\n")
-    brand = input("Enter car brand:\n")
-    year = int(input("Enter car year:\n"))
-    color = input("Enter car color:\n")
-    mileage = float(input("Enter mileage:\n"))
-    return Car(car_id, brand, year, color, mileage)
+    def change_color(self, new_color):
+        self.color = new_color
  
-def display_cars(car_dict):
-    for car in car_dict.values():
-        print(car)
+    def drive(self, miles):
+        self.mileage = self.mileage + miles
+ 
+    def __str__(self):
+        return f"{self.car_id} - {self.year} {self.color} {self.brand} with {self.mileage} miles"
