@@ -1,1 +1,18 @@
 # bank_account.py
+class BankAccount:
+    def __init__(self, account_number, balance=0.0):
+        self.account_number = account_number
+        self.balance = balance
+ 
+    def deposit(self, amount):
+        self.balance = self.balance + amount
+ 
+    def withdraw(self, amount):
+        if amount > self.balance:
+            return -1
+        self.balance = self.balance - amount
+        return 0
+ 
+    def __str__(self):
+        account_str = str(self.account_number)
+        return f"Account Number: **{account_str[-2:]}\nCurrent Balance: {self.balance:.2f}"
